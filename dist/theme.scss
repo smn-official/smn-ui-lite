@@ -1,0 +1,64 @@
+@import "palette";
+@import "utils/is-bright";
+@import "variables";
+
+@function get-color($color) {
+    @if type-of($color) == 'color' {
+        @return $color;
+    }
+    @else {
+        @return ui-color(map_get($color, color), map_get($color, hue));
+    }
+}
+
+
+@function ui-theme($primary, $accent, $is-dark: false) {
+    $text-color: rgba(0, 0, 0, 0.87);
+    $secondary-text-color: rgba(0, 0, 0, 0.54);
+    $disabled-text-color: rgba(0, 0, 0, 0.38);
+
+    @if $is-dark == true {
+        $text-color: rgba(255, 255, 255, 1);
+        $secondary-text-color: rgba(255, 255, 255, 0.70);
+        $disabled-text-color: rgba(255, 255, 255, 0.50);
+    }
+
+    $primary-color: get-color($primary);
+    $accent-color: get-color($accent);
+
+    $theme: (
+        primary-color: $primary-color,
+        primary-text-color: ui-is-bright($primary-color),
+
+        accent-color: get-color($accent),
+        accent-text-color: ui-is-bright($accent-color),
+
+        is-dark: $is-dark,
+
+        text-color: $text-color,
+        secondary-text-color: $secondary-text-color,
+        disabled-text-color: $disabled-text-color,
+    );
+
+    @return $theme;
+}
+
+
+@mixin ui-build-theme($theme) {
+    html, body {
+        background-color: ui-if(map_get($theme, is-dark), #303030, #FAFAFA);
+        color: map_get($theme, primary-text-color);
+    }
+    .primary-text {
+        color: map_get($theme, primary-text-color);
+    }
+    .secondary-text {
+        color: map_get($theme, secondary-text-color);
+    }
+    .hint-text {
+        color: map_get($theme, hint-text-color);
+    }
+
+    @include ui-button($theme);
+}
+

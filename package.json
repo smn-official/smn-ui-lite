@@ -1,17 +1,23 @@
 {
   "name": "smn-ui-lite",
   "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "react": "^16.6.3",
-    "react-dom": "^16.6.3",
-    "react-scripts": "2.1.1"
+  "main": "dist/index.scss",
+  "module": "dist/index.scss",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/smn-official/smn-ui-lite"
   },
+  "dependencies": {},
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "prod": "rm -rf dist && cross-env NODE_ENV=production babel src/smn-ui --out-dir dist --copy-files"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -23,6 +29,11 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "node-sass": "^4.10.0"
+    "@babel/cli": "^7.1.5",
+    "cross-env": "^5.2.0",
+    "node-sass": "^4.10.0",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "react-scripts": "2.1.1"
   }
 }
