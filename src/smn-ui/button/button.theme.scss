@@ -1,0 +1,132 @@
+@mixin ui-button($theme) {
+    $is-dark: map-get($theme, is-dark);
+    $text-color: ui-if($is-dark == true, rgba(#FFF, .7), rgba(#000, .54));
+    $hover-color: ui-if($is-dark == true, #FFF, #000);
+    $disabled-background-color: ui-if($is-dark == true, rgba(#FFF, 0.12), rgba(#000, 0.12));
+    $disabled-text-color: ui-if($is-dark == true, rgba(#FFF, 0.30), rgba(#000, 0.26));
+    $outline-color: ui-if($is-dark, rgba(#FFF, .12) ,rgba(#000, .12));
+    $primary-color: map_get($theme, primary-color);
+    $accent-color: map_get($theme, accent-color);
+    
+    .ui-button {
+        &.flat {
+            &::before {
+                background-color: $hover-color;
+            }
+
+            // .ui-ripple-wave {
+            //     background-color: ui-if($hover-color == #fff, rgba(255, 255, 255, 0.1), rgba(33, 33, 33, 0.1));
+            // }
+
+            &.icon {
+                &.primary::before {
+                    background-color: $primary-color;
+                }
+
+                &.accent::before {
+                    background-color: $accent-color;
+                }
+            }
+        }
+
+        &.outline {
+            background-color: transparent;
+            border-color: $outline-color;
+        }
+
+        &:disabled {
+            background-color: $disabled-background-color;
+            color: $disabled-text-color;
+
+            &.flat, &.outline {
+                background-color: transparent;
+            }
+        }
+
+        &:not(.success):not(.warning):not(.error):not(:disabled) {
+            background-color: ui-color('grey', '300');
+            color: ui-text-color('grey', '300');
+
+            &::before {
+                background-color: ui-text-color('grey', '300');
+            }
+
+            // .ui-ripple-wave {
+            //     background-color: ui-if(ui-text-color('grey', '300') == #fff, rgba(255, 255, 255, 0.1), rgba(33, 33, 33, 0.1));
+            // }
+
+            &.flat, &.outline {
+                background-color: transparent;
+                color: $text-color;
+
+                &::before {
+                    background-color: $hover-color;
+                }
+
+                // .ui-ripple-wave {
+                //     background-color: ui-if($hover-color == #fff, rgba(255, 255, 255, 0.1), rgba(33, 33, 33, 0.1));
+                // }
+
+                // ui-progress-radial.indeterminate .spinner-container .path {
+                //     stroke: $text-color;
+                // }
+            }
+
+            &.primary {
+                background-color: $primary-color;
+                color: map_get($theme, primary-text-color);
+
+                // .ui-ripple-wave {
+                //     background-color: ui-if(ui-text-color(map_get($theme, primary), map_get($theme, primary-hue)) == #fff, rgba(255, 255, 255, 0.1), rgba(33, 33, 33, 0.1));
+                // }
+
+                &::before {
+                    background-color: map_get($theme, primary-text-color);
+                }
+
+                &.flat, &.outline {
+                    background-color: transparent;
+                    color: $primary-color;
+
+                    &::before {
+                        background-color: $hover-color;
+                    }
+                }
+
+                // ui-progress-radial.indeterminate .spinner-container .path {
+                //     stroke: ui-text-color(map_get($theme, primary), map_get($theme, primary-hue));
+                // }
+            }
+
+            &.accent {
+                background-color: $accent-color;
+                color: map_get($theme, accent-text-color);
+
+                // .ui-ripple-wave {
+                //     background-color: ui-if(ui-text-color(map_get($theme, accent), map_get($theme, accent-hue)) == #fff, rgba(255, 255, 255, 0.1), rgba(33, 33, 33, 0.1));
+                // }
+
+                &::before {
+                    background-color: map_get($theme, accent-text-color);
+                }
+
+                &.flat, &.outline {
+                    background-color: transparent;
+                    color: $accent-color;
+
+                    &::before {
+                        background-color: $hover-color;
+                    }
+                }
+
+                // ui-progress-radial.indeterminate .spinner-container .path {
+                //     stroke: ui-text-color(map_get($theme, accent), map_get($theme, accent-hue));
+                // }
+            }
+
+            // &.flat .ui-ripple-wave {
+            //     background-color: ui-if($hover-color == #fff, rgba(255, 255, 255, 0.1), rgba(33, 33, 33, 0.1));
+            // }
+        }
+    }
+}

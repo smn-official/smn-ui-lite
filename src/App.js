@@ -1,28 +1,192 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
+	render() {
+		return (
+			<div className='container'>
+				<div className='ui-button-container'>
+					<button className='ui-button'>Test</button>
+					<button className='ui-button' disabled>Test</button>
+					<button className='ui-button primary'>Test</button>
+					<button className='ui-button accent'>Test</button>
+					<button className='ui-button success'>Test</button>
+					<button className='ui-button warning'>Test</button>
+					<button className='ui-button error'>Test</button>
+				</div>
+				<div className='ui-button-container'>
+					<button className='ui-button'>
+						<i className="material-icons">add</i>
+						Add
+					</button>
+					<button className='ui-button' disabled>
+						<i className="material-icons">add</i>
+						Add
+					</button>
+					<button className='ui-button primary'>
+						<i className="material-icons">add</i>
+						Add
+					</button>
+					<button className='ui-button accent'>
+						<i className="material-icons">add</i>
+						Add
+					</button>
+					<button className='ui-button success'>
+						<i className="material-icons">add</i>
+						Add
+					</button>
+					<button className='ui-button warning'>
+						<i className="material-icons">add</i>
+						Add
+					</button>
+					<button className='ui-button error'>
+						<i className="material-icons">add</i>
+						Add
+					</button>
+				</div>
+				<div className='ui-button-container'>
+					<button className='ui-button raised'>Test</button>
+					<button className='ui-button raised' disabled>Test</button>
+					<button className='ui-button raised primary'>Test</button>
+					<button className='ui-button raised accent'>Test</button>
+					<button className='ui-button raised success'>Test</button>
+					<button className='ui-button raised warning'>Test</button>
+					<button className='ui-button raised error'>Test</button>
+				</div>
+				<div className='ui-button-container'>
+					<button className='ui-button outline'>
+						<i className="material-icons">add</i>
+						Add
+					</button>
+					<button className='ui-button outline' disabled>
+						<i className="material-icons">add</i>
+						Add
+					</button>
+					<button className='ui-button outline primary'>
+						<i className="material-icons">add</i>
+						Add
+					</button>
+					<button className='ui-button outline accent'>
+						<i className="material-icons">add</i>
+						Add
+					</button>
+					<button className='ui-button outline success'>
+						<i className="material-icons">add</i>
+						Add
+					</button>
+					<button className='ui-button outline warning'>
+						<i className="material-icons">add</i>
+						Add
+					</button>
+					<button className='ui-button outline error'>
+						<i className="material-icons">add</i>
+						Add
+					</button>
+				</div>
+				<div className='ui-button-container'>
+					<button className='ui-button flat'> Add</button>
+					<button className='ui-button flat' disabled>Add</button>
+					<button className='ui-button flat primary'>Test</button>
+					<button className='ui-button flat accent'>Test</button>
+					<button className='ui-button flat success'>Test</button>
+					<button className='ui-button flat warning'>Test</button>
+					<button className='ui-button flat error'>Test</button>
+				</div>
+				<div className='ui-button-container'>
+					<button className='ui-button fab'>
+						<i className="material-icons">add</i>
+					</button>
+					<button className='ui-button fab' disabled>
+						<i className="material-icons">add</i>
+					</button>
+					<button className='ui-button primary fab'>
+						<i className="material-icons">add</i>
+					</button>
+					<button className='ui-button accent fab'>
+						<i className="material-icons">add</i>
+					</button>
+					<button className='ui-button success fab'>
+						<i className="material-icons">add</i>
+					</button>
+					<button className='ui-button warning fab'>
+						<i className="material-icons">add</i>
+					</button>
+					<button className='ui-button error fab'>
+						<i className="material-icons">add</i>
+					</button>
+				</div>
+				<div className='ui-button-container'>
+					<button className='ui-button fab mini'>
+						<i className="material-icons">add</i>
+					</button>
+					<button className='ui-button fab mini' disabled>
+						<i className="material-icons">add</i>
+					</button>
+					<button className='ui-button primary fab mini'>
+						<i className="material-icons">add</i>
+					</button>
+					<button className='ui-button accent fab mini'>
+						<i className="material-icons">add</i>
+					</button>
+					<button className='ui-button success fab mini'>
+						<i className="material-icons">add</i>
+					</button>
+					<button className='ui-button warning fab mini'>
+						<i className="material-icons">add</i>
+					</button>
+					<button className='ui-button error fab mini'>
+						<i className="material-icons">add</i>
+					</button>
+				</div>
+				<div className='ui-button-container'>
+					<button className='ui-button icon'>
+						<i className="material-icons">add</i>
+					</button>
+					<button className='ui-button icon' disabled>
+						<i className="material-icons">add</i>
+					</button>
+					<button className='ui-button primary icon'>
+						<i className="material-icons">add</i>
+					</button>
+					<button className='ui-button accent icon'>
+						<i className="material-icons">add</i>
+					</button>
+					<button className='ui-button success icon'>
+						<i className="material-icons">add</i>
+					</button>
+					<button className='ui-button warning icon'>
+						<i className="material-icons">add</i>
+					</button>
+					<button className='ui-button error icon'>
+						<i className="material-icons">add</i>
+					</button>
+				</div>
+				<div className='ui-button-container'>
+					<button className='ui-button icon square'>
+						<i className="material-icons">add</i>
+					</button>
+					<button className='ui-button icon square' disabled>
+						<i className="material-icons">add</i>
+					</button>
+					<button className='ui-button primary icon square'>
+						<i className="material-icons">add</i>
+					</button>
+					<button className='ui-button accent icon square'>
+						<i className="material-icons">add</i>
+					</button>
+					<button className='ui-button success icon square'>
+						<i className="material-icons">add</i>
+					</button>
+					<button className='ui-button warning icon square'>
+						<i className="material-icons">add</i>
+					</button>
+					<button className='ui-button error icon square'>
+						<i className="material-icons">add</i>
+					</button>
+				</div>
+			</div>
+		);
+	}
 }
 
 export default App;
