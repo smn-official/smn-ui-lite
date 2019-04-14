@@ -5,7 +5,7 @@ class App extends Component {
     render() {
         return (
             <div className='container'>
-                <div className='ui-toolbar fixed flat elevate-on-scroll primary elevate-on-s960 size-2x blue-grey500'>
+                <div className='ui-toolbar elevate-on-s960 blue-grey500'>
                     <img src="https://avatars2.githubusercontent.com/u/25529764?s=200&v=4" className='logo'/>
                     <div className='title'>Demo</div>
                 </div>

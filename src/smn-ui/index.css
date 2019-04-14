@@ -129,7 +129,6 @@ textarea {
   .ui-fab-container {
     right: 10px;
     bottom: 10px;
-    background-color: #000000;
   }
 }
 .ui-fab-container .ui-button.mini:not(:last-child) {
@@ -361,26 +360,25 @@ textarea {
   display: flex;
   align-items: center;
   padding: 4px;
+  animation: fixZindex 0.28s cubic-bezier(0, 0, 0.2, 1);
+  animation-fill-mode: forwards;
 }
 @media only screen and (min-width: 376px) and (min-width: 764px) {
   .ui-toolbar {
     height: 64px;
     min-height: 64px;
-    background-color: #0d47cc;
   }
 }
 @media (max-width: 375px) {
   .ui-toolbar {
     height: 56px;
     min-height: 56px;
-    background-color: pink;
   }
 }
 @media only screen and (min-width: 376px) and (max-width: 763px) and (orientation: landscape) {
   .ui-toolbar {
     height: 48px;
     min-height: 48px;
-    background-color: #00c853;
   }
 }
 .ui-toolbar .ui-button {
@@ -389,7 +387,6 @@ textarea {
 @media only screen and (min-width: 376px) and (max-width: 763px) and (orientation: landscape) {
   .ui-toolbar .ui-button {
     margin: 6px;
-    background-color: #00c853;
   }
 }
 .ui-toolbar .ui-button:not(.success):not(.warning):not(.error):not(:disabled).flat {
@@ -424,7 +421,6 @@ textarea {
 @media (max-width: 375px), only screen and (min-width: 376px) and (max-width: 763px) {
   .ui-toolbar .logo {
     display: none;
-    background-color: #000000;
   }
 }
 .ui-toolbar .logo img {
@@ -433,21 +429,12 @@ textarea {
 @media only screen and (min-width: 376px) and (min-width: 764px) {
   .ui-toolbar .logo:first-child {
     margin-left: 15px;
-    background-color: #0d47cc;
   }
 }
 @media (max-width: 375px), only screen and (min-width: 376px) and (max-width: 763px) {
   .ui-toolbar .logo ~ .title {
     border-left: none;
-    background-color: #000000;
   }
-}
-.ui-toolbar.size-2x:not(.scrolled) {
-  box-shadow: none;
-}
-.ui-toolbar.size-2x {
-  animation: fixZindex 0.28s cubic-bezier(0, 0, 0.2, 1);
-  animation-fill-mode: forwards;
 }
 @keyframes fixZindex {
   0% {
@@ -460,75 +447,78 @@ textarea {
     z-index: 3;
   }
 }
-.ui-toolbar.size-2x.elevate-on-s480 {
+.ui-toolbar.elevate-on-s480 {
   height: 162px;
   padding-bottom: 102px;
 }
 @media (max-width: 480px) {
-  .ui-toolbar.size-2x.elevate-on-s480 {
+  .ui-toolbar.elevate-on-s480 {
     height: 56px;
     padding-bottom: 4px;
   }
 }
-.ui-toolbar.size-2x.elevate-on-s600 {
+.ui-toolbar.elevate-on-s600 {
   height: 162px;
   padding-bottom: 102px;
 }
 @media (max-width: 600px) {
-  .ui-toolbar.size-2x.elevate-on-s600 {
+  .ui-toolbar.elevate-on-s600 {
     height: 56px;
     padding-bottom: 4px;
   }
 }
-.ui-toolbar.size-2x.elevate-on-s840 {
+.ui-toolbar.elevate-on-s840 {
   height: 162px;
   padding-bottom: 102px;
 }
 @media (max-width: 840px) {
-  .ui-toolbar.size-2x.elevate-on-s840 {
+  .ui-toolbar.elevate-on-s840 {
     height: 56px;
     padding-bottom: 4px;
   }
 }
-.ui-toolbar.size-2x.elevate-on-s960 {
+.ui-toolbar.elevate-on-s960 {
   height: 162px;
   padding-bottom: 102px;
 }
 @media (max-width: 960px) {
-  .ui-toolbar.size-2x.elevate-on-s960 {
+  .ui-toolbar.elevate-on-s960 {
     height: 56px;
     padding-bottom: 4px;
   }
 }
-.ui-toolbar.size-2x.elevate-on-s1280 {
+.ui-toolbar.elevate-on-s1280 {
   height: 162px;
   padding-bottom: 102px;
 }
 @media (max-width: 1280px) {
-  .ui-toolbar.size-2x.elevate-on-s1280 {
+  .ui-toolbar.elevate-on-s1280 {
     height: 56px;
     padding-bottom: 4px;
   }
 }
-.ui-toolbar.size-2x.elevate-on-s1440 {
+.ui-toolbar.elevate-on-s1440 {
   height: 162px;
   padding-bottom: 102px;
 }
 @media (max-width: 1440px) {
-  .ui-toolbar.size-2x.elevate-on-s1440 {
+  .ui-toolbar.elevate-on-s1440 {
     height: 56px;
     padding-bottom: 4px;
   }
 }
-.ui-toolbar.size-2x.elevate-on-s1600 {
+.ui-toolbar.elevate-on-s1600 {
   height: 162px;
   padding-bottom: 102px;
 }
 @media (max-width: 1600px) {
-  .ui-toolbar.size-2x.elevate-on-s1600 {
+  .ui-toolbar.elevate-on-s1600 {
     height: 56px;
     padding-bottom: 4px;
   }
+}
+.ui-toolbar:not(.scrolled) {
+  box-shadow: none;
 }
 .ui-toolbar.flat:not(.scrolled) {
   box-shadow: none;
@@ -1719,7 +1709,6 @@ textarea {
 @media (max-width: 375px), only screen and (min-width: 376px) and (max-width: 763px) {
   .ui-card.raising {
     box-shadow: 0 0 4px 0 rgba(0,0,0,.14), 0 3px 4px 0 rgba(0,0,0,.12), 0 1px 5px 0 rgba(0,0,0,.20);
-    background-color: #000000;
   }
 }
 .ui-card.raising:hover {
