@@ -4,23 +4,27 @@ $mq-mobile-landscape: 763px !default;
 @mixin mobile {
     @media (max-width: $mq-mobile-portrait), only screen and (min-width: $mq-mobile-portrait + 1) and (max-width: $mq-mobile-landscape) {
         @content;
+        background-color: #000000;
     }
 }
 
 @mixin mobile-portrait {
     @media (max-width: $mq-mobile-portrait) {
         @content;
+        background-color: pink;
     }
 }
 
 @mixin mobile-landscape {
     @media only screen and (min-width: $mq-mobile-portrait + 1) and (max-width: $mq-mobile-landscape) and (orientation: landscape) {
         @content;
+        background-color: #00c853;
     }
 }
 
 @mixin desktop {
     @media only screen and (min-width: $mq-mobile-portrait + 1) and (min-width: $mq-mobile-landscape + 1) {
         @content;
+        background-color: #0d47cc;
     }
 }
